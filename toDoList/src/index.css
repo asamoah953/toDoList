@@ -4,3 +4,12 @@
     box-sizing: border-box;
     background-color: hsl(214, 17%, 84%);
 }
+
+a {
+  text-decoration: none;
+  color: inherit; /* Keeps the same color as parent */
+}
+
+a:hover {
+  text-decoration: none; /* Ensures hover doesn't bring it back */
+}
