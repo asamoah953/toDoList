@@ -1,0 +1,108 @@
+.appBarContainer {
+    width: 100%;
+    height: 6rem;
+    border: .2rem solid black;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: hsl(214, 17%, 84%);
+}
+
+
+/* .dateContainer {
+    padding: 1rem;
+    width: 17rem;
+    height: 2rem;
+    border: 0.1rem solid black;
+    display: flex;
+    justify-content: center;
+} */
+
+.header {
+  font-size: 3rem;
+  padding-left: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(214, 17%, 84%);
+  margin-top: 2.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header:hover {
+  color: #2563eb; /* text color only changes */
+  text-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+
+
+.dateContainer {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-right: 19rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+    background-color: hsl(214, 17%, 84%);
+
+}
+
+
+.date,
+.time {
+    margin-top: 1.5rem;
+    margin-right: 0.9rem;
+    color: #1f2937;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    background-color: hsl(214, 17%, 84%);
+}
+
+.time {
+    width: 5rem;
+    height: 2rem;
+    padding: 0.4rem 0.6rem;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+    border: 1px solid #1e40af;
+    border-radius: 0.6rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+    transition: all 0.3s ease;
+}
+
+.time:hover {
+    background: linear-gradient(135deg, #3b82f6, #60a5fa);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.5);
+}
+
+
+.avatarContainer {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: hsl(214, 17%, 84%);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.avatar {
+    margin-right: 1rem;
+    background-color: hsl(214, 17%, 84%);
+}
+
+.down-arrow {
+    background-color: hsl(214, 17%, 84%);
+}
