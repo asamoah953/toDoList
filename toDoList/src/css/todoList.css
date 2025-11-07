@@ -1,0 +1,24 @@
+.titleContainer {
+  width: 100%;
+  padding: 14px 48px 14px 18px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #f8f8f8;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  background-color:  hsl(214, 17%, 84%);
+}
+
+.title{
+    font-size: 3rem;
+    letter-spacing: .2rem;
+}
+
+.graduate {
+    font-size: 3rem;
+    margin-right: .5rem;
+}

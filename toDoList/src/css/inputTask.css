@@ -1,0 +1,41 @@
+.todo-input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.todo-form {
+  position: relative;
+  width: 100%;
+  max-width: 38rem;
+}
+
+.todo-input {
+  width: 100%;
+  padding: 14px 48px 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: #f8f8f8;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.todo-input:focus {
+  background: #fff;
+  border-color: #4a7dfc;
+  box-shadow: 0 0 8px rgba(74, 125, 252, 0.3);
+}
+
+.add-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: rgb(45, 44, 44);
+  background-color: #fff;
+}

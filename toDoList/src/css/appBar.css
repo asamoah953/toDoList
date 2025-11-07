@@ -10,14 +10,7 @@
 }
 
 
-/* .dateContainer {
-    padding: 1rem;
-    width: 17rem;
-    height: 2rem;
-    border: 0.1rem solid black;
-    display: flex;
-    justify-content: center;
-} */
+
 
 .header {
   font-size: 3rem;
@@ -69,7 +62,6 @@
     padding: 0.4rem 0.6rem;
     background: linear-gradient(135deg, #2563eb, #3b82f6);
     color: #fff;
-    border: 1px solid #1e40af;
     border-radius: 0.6rem;
     font-weight: 600;
     font-size: 0.95rem;

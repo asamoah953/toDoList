@@ -6,46 +6,76 @@ import { IoHomeSharp } from "react-icons/io5";
 import { IoPersonAdd } from "react-icons/io5";
 import { IoMdStats } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
+import SchoolToDoList from "./pages/homePage";
+import { Routes, Route } from "react-router-dom";
 
 
 
 
 
 
-function App(){
+function App() {
 
   let taskInfo = [
     {
-      title:"School Tasks",
-      logo:<GiGraduateCap />,
-      url:'/schooltask'
+      title: "School Tasks",
+      logo: <GiGraduateCap />,
+      url: '/',
+      id: 1
     },
     {
-      title:"Home Tasks",
-      logo:<IoHomeSharp />,
-      url:'/hometask'
+      title: "Home Tasks",
+      logo: <IoHomeSharp />,
+      url: '/hometask',
+      id: 2
     },
     {
-      title:"Personal Tasks",
-      logo:< IoPersonAdd />,
-      url:'/personaltask'
+      title: "Personal Tasks",
+      logo: < IoPersonAdd />,
+      url: '/personaltask',
+      id: 3
     },
     {
-      title:"Statistics ",
-      logo:<IoMdStats />,
-      url:'/statistics'
+      title: "Statistics ",
+      logo: <IoMdStats />,
+      url: '/statistics',
+      id: 4
     },
     {
-      title:"Settings",
-      logo:<IoIosSettings />,
-      url:'/settings'
+      title: "Settings",
+      logo: <IoIosSettings />,
+      url: '/settings',
+      id: 5
     }
-   
+
   ]
-  return(
+
+  const schoolAssignment = [
+    {
+      id: 1,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 1,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 1,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 1,
+      task: "Submit assignment on react Components"
+    }
+  ]
+  return (
     <>
       <AppBar />
-      <SideBar taskInfo = {taskInfo}/>
+      <SideBar taskInfo={taskInfo} />
+
+      <Routes>
+        <Route path="/" element={<SchoolToDoList schoolAssignment= {schoolAssignment}/>} />
+      </Routes>
 
     </>
   )
