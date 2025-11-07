@@ -1,5 +1,5 @@
 import '../css/appBar.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -11,9 +11,13 @@ function DateObject() {
 
     let date = new Date().toString().slice(0, 16);
 
-    setInterval(() => {
-        setTime(new Date().toLocaleTimeString());
-    }, 100);
+    useEffect(() => {
+        setInterval(() => {
+            setTime(new Date().toLocaleTimeString());
+        }, 100);
+    },[])
+
+
 
 
 

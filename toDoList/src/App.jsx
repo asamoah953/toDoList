@@ -6,8 +6,10 @@ import { IoHomeSharp } from "react-icons/io5";
 import { IoPersonAdd } from "react-icons/io5";
 import { IoMdStats } from "react-icons/io";
 import { IoIosSettings } from "react-icons/io";
-import SchoolToDoList from "./pages/homePage";
+import SchoolToDoList from "./pages/schoolPage";
 import { Routes, Route } from "react-router-dom";
+import HouseAsignment from "./pages/housePage";
+import PersonalAsignment from "./pages/personalPage";
 
 
 
@@ -56,18 +58,57 @@ function App() {
       task: "Submit assignment on react Components"
     },
     {
-      id: 1,
+      id: 2,
       task: "Submit assignment on react Components"
     },
+    {
+      id: 3,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 4,
+      task: "Submit assignment on react Components"
+    },
+  ]
+
+  const houseAssignment = [
     {
       id: 1,
       task: "Submit assignment on react Components"
     },
     {
-      id: 1,
+      id: 2,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 3,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 4,
       task: "Submit assignment on react Components"
     }
   ]
+
+  const personalAssignment = [
+    {
+      id: 1,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 2,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 3,
+      task: "Submit assignment on react Components"
+    },
+    {
+      id: 4,
+      task: "Submit assignment on react Components"
+    }
+  ]
+
   return (
     <>
       <AppBar />
@@ -75,6 +116,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<SchoolToDoList schoolAssignment= {schoolAssignment}/>} />
+        <Route path="/hometask" element={<HouseAsignment houseAssignment= {houseAssignment}/>} />
+        <Route path="/personaltask" element={<PersonalAsignment personalAssignment= {personalAssignment}/>} />
       </Routes>
 
     </>
