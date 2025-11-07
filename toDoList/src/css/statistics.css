@@ -1,0 +1,20 @@
+.stats {
+    width: 37rem;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: -22rem;
+    margin-left: -3rem;
+    background-color: hsl(214, 17%, 84%);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.mychart {
+width: 37rem;
+ height: 100vh;
+}
+
+
+
