@@ -1,23 +1,23 @@
 .home-page {
-    width: 37rem;
+    width: 48rem;
     height: 50vh;
     display: flex;
     flex-direction: column;
     justify-self: center;
     margin-top: -22rem;
-    margin-left: -3rem;
+    margin-left: 3rem;
     background-color: hsl(214, 17%, 84%);
     overflow-y: auto;
     scroll-behavior: smooth;
 
-    /* ✅ Hide scrollbar in Firefox */
-    /* scrollbar-width: none; */
+    /* Hide scrollbar in Firefox */
+    scrollbar-width: none;
 
-    /* ✅ Hide scrollbar in Internet Explorer/Edge */
+    /*  Hide scrollbar in Internet Explorer/Edge */
     /* -ms-overflow-style: none; */
 }
 
-/* ✅ Hide scrollbar in Chrome, Safari, Opera */
+/* Hide scrollbar in Chrome, Safari, Opera */
 /* .home-page::-webkit-scrollbar {
     display: none;
 } */
@@ -27,7 +27,7 @@
 
 .assignment {
     width: 100%;
-    max-width: 38rem;
+    max-width: 50rem;
     background-color: #ffffff;
     padding: 14px;
     border-radius: 6px;

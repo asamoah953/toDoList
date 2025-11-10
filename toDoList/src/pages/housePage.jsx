@@ -1,5 +1,5 @@
 import '../css/homePage.css';
-import InputTask from '../component/inputTask';
+import HomeTaskInput from '../component/homeTaskInput';
 import HouseToDoListTitle from '../component/houseToDoList';
 import { useState } from 'react';
 import { MdDelete } from "react-icons/md";
@@ -15,7 +15,7 @@ function HouseAsignment({ houseAssignment }) {
     return (
         <div className="home-page">
             <HouseToDoListTitle />
-            <InputTask />
+            <HomeTaskInput setAssignment = {setAssignment} assignment={assignment}/>
 
 
             {assignment && assignment.map((assigned) => (

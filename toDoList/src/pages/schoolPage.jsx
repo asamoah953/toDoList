@@ -1,5 +1,5 @@
 import '../css/homePage.css';
-import InputTask from '../component/inputTask';
+import SchoolTaskInput from '../component/schoolTaskInput';
 import SchoolToDoListTitle from '../component/schoolToDoList';
 import { useState } from 'react';
 import { MdDelete } from "react-icons/md";
@@ -15,17 +15,17 @@ function SchoolToDoList({ schoolAssignment }) {
     return (
         <div className="home-page">
             <SchoolToDoListTitle />
-            <InputTask />
+            <SchoolTaskInput assignment = {assignment} setAssignment={setAssignment}/>
 
 
             {assignment && assignment.map((assigned) => (
-                <div key={assigned.id} className="assignment">
+                <div key={assigned.id} className="assignment" >
                     <div className="left">
-                        <CheckInput className ="checkBox"/>
+                        <CheckInput className ="checkBox" key={assigned.id}/>
                         <span className="task-text">{assigned.task}</span>
                     </div>
 
-                    <MdDelete className="delete-icon" />
+                    <MdDelete className="delete-icon" key={assigned}/>
                 </div>
             ))}
 

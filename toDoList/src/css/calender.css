@@ -1,0 +1,51 @@
+.calenderContainer {
+    width: 16rem;
+    height: 35vh;
+
+    justify-self: right;
+    margin-right: 4rem;
+    margin-top: -25rem;
+
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.cal-month-title {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/* Table */
+.cal-table {
+    width: 100%;
+    height: 20vh;
+    border-collapse: collapse;
+    table-layout: fixed;   /* ✅ Makes cells equal size */
+
+}
+
+.cal-table th {
+    font-size: 0.8rem;
+    padding: 4px 0;
+    font-weight: bold;
+}
+
+.cal-table td {
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 6px;
+}
+
+/* ✅ Highlight today */
+.today {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+}

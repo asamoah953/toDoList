@@ -3,10 +3,28 @@ import { useState, useRef, useEffect } from "react";
 import { IoMdAdd } from "react-icons/io";
 
 
-function InputTask() {
+
+
+function SchoolTaskInput( { assignment, setAssignment}) {
+
+
 
   const [text, setText] = useState('');
   const inputRef = useRef(null);
+
+  function AddToList() {
+    let id = assignment[assignment.length - 1].id + 1;
+
+    let newData = {
+      id:id,
+      task:`${text}`
+    }
+
+    setAssignment([...assignment, newData]);
+
+    setText(' ')
+
+  }
 
   useEffect(() => {
     inputRef.current.focus();
@@ -29,11 +47,11 @@ function InputTask() {
           className="todo-input"
         />
 
-        <IoMdAdd className="add-icon" />
+        <IoMdAdd className="add-icon" onClick={AddToList}/>
       </form>
     </div>
 
   )
 }
 
-export default InputTask;
+export default SchoolTaskInput;

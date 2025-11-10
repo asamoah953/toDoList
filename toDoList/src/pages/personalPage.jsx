@@ -1,5 +1,5 @@
 import '../css/homePage.css';
-import InputTask from '../component/inputTask';
+import PersonlTaskInput from '../component/personalTaskInput';
 import PersonalDoListTitle from '../component/personalToDoList';
 import { useState } from 'react';
 import { MdDelete } from "react-icons/md";
@@ -15,7 +15,7 @@ function PersonalAsignment({ personalAssignment }) {
     return (
         <div className="home-page">
             <PersonalDoListTitle />
-            <InputTask />
+            <PersonlTaskInput  assignment={assignment} setAssignment ={setAssignment}/>
 
 
             {assignment && assignment.map((assigned) => (

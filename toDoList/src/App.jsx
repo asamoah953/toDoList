@@ -11,6 +11,8 @@ import { Routes, Route } from "react-router-dom";
 import HouseAsignment from "./pages/housePage";
 import PersonalAsignment from "./pages/personalPage";
 import GoogleBarChart from "./pages/statisticsPage";
+import Calander from "./component/calander";
+import Reminder from "./component/reminder";
 
 
 
@@ -116,11 +118,14 @@ function App() {
       <SideBar taskInfo={taskInfo} />
 
       <Routes>
-        <Route path="/" element={<SchoolToDoList schoolAssignment= {schoolAssignment}/>} />
+        <Route path="/" element={<SchoolToDoList schoolAssignment= {schoolAssignment} />} />
         <Route path="/hometask" element={<HouseAsignment houseAssignment= {houseAssignment}/>} />
         <Route path="/personaltask" element={<PersonalAsignment personalAssignment= {personalAssignment}/>} />
         <Route path="/statistics" element={<GoogleBarChart />} />
       </Routes>
+
+      <Calander />
+      <Reminder />
 
     </>
   )
