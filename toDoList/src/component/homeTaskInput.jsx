@@ -11,22 +11,30 @@ function HomeTaskInput({ assignment, setAssignment }) {
     const inputRef = useRef(null);
 
     function addToHomeTask() {
-            let id = assignment[assignment.length - 1].id + 1;
-            let newData = {
-                id:id,
-                task:`${text}`
-            }
+        if (!text.trim()) return;
 
-            let newData1 = [...assignment, newData];
-             setAssignment(newData1);
-            localStorage.setItem('assignment', JSON.stringify(newData1))
+        let id;
+        if (assignment.length === 0) {
+            id = 1;
+        } else {
+            id = assignment[assignment.length - 1].id + 1;
+        }
 
-            setText('');
+        let newData = {
+            id,
+            task: text
+        };
+
+        let newData1 = [...assignment, newData];
+        setAssignment(newData1);
+        localStorage.setItem('assignment', JSON.stringify(newData1))
+
+        setText('');
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         let saved = localStorage.getItem('assignment');
-        if(saved) JSON.parse(saved)
+        if (saved) JSON.parse(saved)
     })
 
     useEffect(() => {
@@ -50,7 +58,7 @@ function HomeTaskInput({ assignment, setAssignment }) {
                     className="todo-input"
                 />
 
-                <IoMdAdd className="add-icon"  onClick={addToHomeTask}/>
+                <IoMdAdd className="add-icon" onClick={addToHomeTask} />
             </form>
         </div>
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function CheckInput() {
 
-    const [checked,setChecked] = useState(false)
+    const [checked,setChecked] = useState(true)
 
     return(
         <>

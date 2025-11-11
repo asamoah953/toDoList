@@ -1,5 +1,6 @@
 // import { Router, Routes, Route} from 'react-router-dom';
 import AppBar from "./component/appBar";
+import { useState } from "react";
 import SideBar from "./component/sideBar";
 import { GiGraduateCap } from "react-icons/gi";
 import { IoHomeSharp } from "react-icons/io5";
@@ -13,6 +14,7 @@ import PersonalAsignment from "./pages/personalPage";
 import GoogleBarChart from "./pages/statisticsPage";
 import Calander from "./component/calander";
 import Reminder from "./component/reminder";
+import PopMenu from "./component/popMenu";
 
 
 
@@ -20,6 +22,8 @@ import Reminder from "./component/reminder";
 
 
 function App() {
+
+  const [dropdown,setDropDown] = useState(false);
 
   let taskInfo = [
     {
@@ -62,59 +66,59 @@ function App() {
     },
     {
       id: 2,
-      task: "Submit assignment on react Components"
+      task: "Calculus II assignment by Monday"
     },
     {
       id: 3,
-      task: "Submit assignment on react Components"
+      task: "Java tutorial"
     },
     {
       id: 4,
-      task: "Submit assignment on react Components"
+      task: "Course resgistration online"
     },
   ]
 
   const houseAssignment = [
     {
       id: 1,
-      task: "Submit assignment on react Components"
+      task: "Wash daddy's car"
     },
     {
       id: 2,
-      task: "Submit assignment on react Components"
+      task: "Trim the flower"
     },
     {
       id: 3,
-      task: "Submit assignment on react Components"
+      task: "Cook for the child"
     },
     {
       id: 4,
-      task: "Submit assignment on react Components"
+      task: "Go to the back to redraw some money for mum"
     }
   ]
 
   const personalAssignment = [
     {
       id: 1,
-      task: "Submit assignment on react Components"
+      task: "Visit a friend at Kumasi"
     },
     {
       id: 2,
-      task: "Submit assignment on react Components"
+      task: "Go to church for prayer meeting"
     },
     {
       id: 3,
-      task: "Submit assignment on react Components"
+      task: "Wash my clothes by Monday"
     },
     {
       id: 4,
-      task: "Submit assignment on react Components"
+      task: "Join Atta at the gym tommorrow"
     }
   ]
 
   return (
     <>
-      <AppBar />
+      <AppBar setDropDown = {setDropDown}/>
       <SideBar taskInfo={taskInfo} />
 
       <Routes>
@@ -126,6 +130,10 @@ function App() {
 
       <Calander />
       <Reminder />
+      {
+        dropdown &&  <PopMenu />
+
+      }
 
     </>
   )

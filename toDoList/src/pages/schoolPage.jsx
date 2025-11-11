@@ -10,7 +10,12 @@ import CheckInput from '../component/checkedInput';
 
 function SchoolToDoList({ schoolAssignment }) {
 
-    const [assignment, setAssignment] = useState(schoolAssignment)
+    const [assignment, setAssignment] = useState(schoolAssignment);
+
+    function Del(assigned) {
+        let del = assignment.filter(item=>item.id !== assigned.id);
+        setAssignment(del)
+    }
 
     return (
         <div className="home-page">
@@ -25,7 +30,7 @@ function SchoolToDoList({ schoolAssignment }) {
                         <span className="task-text">{assigned.task}</span>
                     </div>
 
-                    <MdDelete className="delete-icon" key={assigned}/>
+                    <MdDelete className="delete-icon" onClick={()=>Del(assigned)}/>
                 </div>
             ))}
 

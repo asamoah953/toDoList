@@ -1,0 +1,36 @@
+.pop_menu {
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    width: 20rem;
+    height: 20vh;
+    display: flex;
+    justify-self: right;
+    position: absolute;
+    flex-direction: column;
+
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+
+    top: 6rem;
+    padding-right: 4rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+}
+
+/* ✅ Menu items */
+.menu_item {
+    padding: 1rem 1.2rem;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: .5rem;
+}
+
+/* ✅ Hover effect */
+.menu_item:hover {
+    background: rgb(17, 17, 16);
+    transform: translateX(4px);
+}
+

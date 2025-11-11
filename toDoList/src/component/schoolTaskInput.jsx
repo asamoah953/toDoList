@@ -5,7 +5,7 @@ import { IoMdAdd } from "react-icons/io";
 
 
 
-function SchoolTaskInput( { assignment, setAssignment}) {
+function SchoolTaskInput({ assignment, setAssignment }) {
 
 
 
@@ -13,11 +13,18 @@ function SchoolTaskInput( { assignment, setAssignment}) {
   const inputRef = useRef(null);
 
   function AddToList() {
-    let id = assignment[assignment.length - 1].id + 1;
+    if (!text.trim()) return;
 
+    let id;
+    if (assignment.length === 0) {
+      id = 1;
+    } else {
+      id = assignment[assignment.length - 1].id + 1;
+    }
+    
     let newData = {
-      id:id,
-      task:`${text}`
+      id: id,
+      task: `${text}`
     }
 
     setAssignment([...assignment, newData]);
@@ -47,7 +54,7 @@ function SchoolTaskInput( { assignment, setAssignment}) {
           className="todo-input"
         />
 
-        <IoMdAdd className="add-icon" onClick={AddToList}/>
+        <IoMdAdd className="add-icon" onClick={AddToList} />
       </form>
     </div>
 

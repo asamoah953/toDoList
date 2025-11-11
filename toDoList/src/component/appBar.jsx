@@ -4,7 +4,7 @@ import { RxAvatar } from "react-icons/rx";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 
-function AppBar() {
+function AppBar({ setDropDown }) {
     return (
         <header className="appBar">
             <div className="appBarContainer">
@@ -14,7 +14,7 @@ function AppBar() {
 
                 <div className='avatarContainer'>
                     <RxAvatar className='avatar'/>
-                    <MdKeyboardArrowDown className='down-arrow'/>
+                    <MdKeyboardArrowDown className='down-arrow'onClick={()=>setDropDown(prev => !prev)}/>
                 </div>
 
 

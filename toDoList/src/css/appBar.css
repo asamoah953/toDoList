@@ -97,4 +97,5 @@
 
 .down-arrow {
     background-color: hsl(214, 17%, 84%);
+    cursor:pointer
 }

@@ -4,13 +4,22 @@ import HouseToDoListTitle from '../component/houseToDoList';
 import { useState } from 'react';
 import { MdDelete } from "react-icons/md";
 import CheckInput from '../component/checkedInput';
+import EmptyList from '../component/emtyList';
 
 
 
 
 function HouseAsignment({ houseAssignment }) {
 
-    const [assignment, setAssignment] = useState(houseAssignment)
+    const [assignment, setAssignment] = useState(houseAssignment );
+
+  function DeleteTask(assigned) {
+        const newList = assignment.filter(item => item.id !== assigned.id);
+        setAssignment(newList);
+
+        // Optional: update localStorage
+        localStorage.setItem("assignment", JSON.stringify(newList));
+    }
 
     return (
         <div className="home-page">
@@ -18,16 +27,17 @@ function HouseAsignment({ houseAssignment }) {
             <HomeTaskInput setAssignment = {setAssignment} assignment={assignment}/>
 
 
-            {assignment && assignment.map((assigned) => (
+            { assignment.length ?  assignment && assignment.map((assigned) => (
                 <div key={assigned.id} className="assignment">
                     <div className="left">
                         <CheckInput className ="checkBox"/>
                         <span className="task-text">{assigned.task}</span>
                     </div>
 
-                    <MdDelete className="delete-icon" />
+                    <MdDelete className="delete-icon" onClick={()=>DeleteTask(assigned)}/>
                 </div>
-            ))}
+            )):<EmptyList />
+        }
 
 
 

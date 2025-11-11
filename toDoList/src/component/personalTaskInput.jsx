@@ -5,20 +5,28 @@ import { IoMdAdd } from "react-icons/io";
 
 
 
-function PersonlTaskInput({ assignment,setAssignment}) {
+function PersonlTaskInput({ assignment, setAssignment }) {
 
 
   const [text, setText] = useState('');
   const inputRef = useRef(null);
 
-  function AddToList(){
-    let id = assignment[assignment.length - 1].id + 1;
-    let newData = {
-      id:id,
-      task: `${text}`
-    }
+  function AddToList() {
+    if (!text.trim()) return;
 
-    setAssignment([...assignment,newData]);
+        let id;
+        if (assignment.length === 0) {
+            id = 1;
+        } else {
+            id = assignment[assignment.length - 1].id + 1;
+        }
+
+           let newData = {
+            id,
+            task: text
+        };
+
+    setAssignment([...assignment, newData]);
 
     setText(' ');
   }
@@ -44,7 +52,7 @@ function PersonlTaskInput({ assignment,setAssignment}) {
           className="todo-input"
         />
 
-        <IoMdAdd className="add-icon" onClick={AddToList}/>
+        <IoMdAdd className="add-icon" onClick={AddToList} />
       </form>
     </div>
 
